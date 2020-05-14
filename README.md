@@ -10,4 +10,4 @@
     ```bash
     code_patch.sh test 0eb3337b847d080590b07c05f98138592aa7f49e 'c:\git'
     ```
-
+4.  [PATCH_NAME].tgz will be generated
