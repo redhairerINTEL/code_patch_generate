@@ -24,8 +24,8 @@ pwd
 # list to all changed file between this change and previous change then pipe all these file name to git archive to archive them 
 # $commit means this change
 # $commit~1 means previous change
-git diff --name-only $commit $commit~1|xargs.exe git archive $commit > $code_patch_dest/$patch_name/mod.tar
-git diff --name-only $commit $commit~1|xargs.exe git archive $commit~1 > $code_patch_dest/$patch_name/ori.tar
+git diff --name-only $commit~1 $commit --diff-filter MA|xargs.exe git archive $commit > $code_patch_dest/$patch_name/mod.tar
+git diff --name-only $commit~1 $commit --diff-filter MD|xargs.exe git archive $commit~1 > $code_patch_dest/$patch_name/ori.tar
 
 cd $code_patch_dest
 pwd
